@@ -377,8 +377,8 @@ loop_conn(World, Erts) ->
 
 
 get_ssl_options(Type) ->
-    application:load(epmdless_dist),
-    {ok, Config} = application:get_env(epmdless_dist, ssl_dist_opt),
+    application:load(epmdless),
+    {ok, Config} = application:get_env(epmdless, ssl_dist_opt),
     proplists:get_value(Type, Config).
 
 
