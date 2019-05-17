@@ -225,10 +225,7 @@ do_accept(Driver, Kernel, AcceptPid, Socket, MyNode, Allowed, SetupTime) ->
 %% for performance reasons
 
 nodelay() ->
-    case application:get_env(kernel, dist_nodelay) of
-        {ok, true} -> {nodelay, true};
-        _ -> {nodelay, false}
-    end.
+    {nodelay, true}.
 
 
 %% ------------------------------------------------------------

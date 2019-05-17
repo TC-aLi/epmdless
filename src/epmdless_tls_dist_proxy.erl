@@ -306,10 +306,7 @@ setup_proxy(Driver, Ip, Port, Parent) ->
 %% %% for performance reasons
 
 nodelay() ->
-    case application:get_env(kernel, dist_nodelay) of
-        {ok, true} -> {nodelay, true};
-        _ -> {nodelay, false}
-    end.
+    {nodelay, true}.
 
 setup_connection(World, ErtsListen) ->
     process_flag(trap_exit, true),
